@@ -41,7 +41,13 @@
   }
 }
 
-.hidden-moblie-above {
+.hidden-moblie {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.hidden-mobile-above {
   @include mobile-above {
     display: none !important;
   }

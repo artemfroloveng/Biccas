@@ -5,6 +5,9 @@
 @use "globals";
 
 // blocks
+@use "blocks/header";
+@use "blocks/burger";
+@use "blocks/mobile-menu";
 
 
 @use "utils";

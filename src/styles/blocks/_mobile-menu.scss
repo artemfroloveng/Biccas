@@ -1,0 +1,41 @@
+.mobile-menu {
+    display: none;              // closed by default
+    position: fixed;            // covers the whole screen
+    inset: 0;                   // This is option for all position, top, right, bottom, left
+    z-index: 10;
+    flex-direction: column;
+    align-items: center;        // center horizontally
+    justify-content: flex-start;    // center vertically
+    gap: 40px;
+    padding: 100px var(--container-padding-x);
+    background-color: var(--color-white);
+    text-align: center;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        margin: 0;
+        padding: 0;
+        list-style: none;       // removes the bullets
+    }
+
+    &__link {
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--color-gray);
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 26px;
+    }
+}
+
+// open state: the checkbox is checked
+.burger-toggle:checked ~ .mobile-menu {
+    display: flex;
+}
